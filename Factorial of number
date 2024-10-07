@@ -1,0 +1,22 @@
+3 5 fact:1 result:1
+7 fact inp
+2 fact one times
+5 fact two halt
+4 count times 30
+1 inp ans ans
+1 count one count 3 16
+2 times one times
+7 ans inp
+7 zero ans
+7 zero count
+4 times one 49 3 16
+7 inp result 3 halt 
+inp:0
+count:0
+times:0
+ans:0
+two:2
+one:1
+zero:0
+halt:9
+
