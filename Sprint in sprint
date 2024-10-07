@@ -1,0 +1,131 @@
+3 start
+temp:0
+constant:0
+one:1
+two:2
+three:3
+four:4
+five:5
+six:6
+seven:7
+nine:9
+zero:0
+
+control:List
+
+start:2 control one constant
+
+Loop:7 control checkFor9
+     4 checkFor9:0 nine Stop
+     7 control checkFor3
+     4 checkFor3:0 three Jump
+     7 control checkFor1
+     4 checkFor1:0 one Addition
+     7 control checkFor2
+     4 checkFor2:0 two Subtraction
+     7 control checkFor4
+     4 checkFor4:0 four JumpEq
+     7 control checkFor5
+     4 checkFor5:0 five JumpLess
+     7 control checkFor7
+     4 checkFor7:0 seven Copy
+     7 control checkFor0
+     4 checkFor0:0 zero Put
+     7 control checkFor6
+     4 checkFor6:0 six Input
+
+
+Jump:1 control one temp
+7 temp move_to
+1 constant move_to:0 control
+3 Loop
+
+
+Stop:9
+
+
+Addition:1 control one temp
+         7 temp cell_no1
+         1 constant cell_no1:0 1st_num
+         1 temp one temp
+         7 temp cell_no2
+         1 constant cell_no2:0 2nd_num
+         1 temp one temp
+         7 temp sum_address
+         1 constant sum_address:0 sum
+         1 1st_num:0 2nd_num:0 sum:0
+         1 temp one control
+         3 Loop
+
+
+Subtraction:1 control one temp
+            7 temp subFrom
+            1 constant subFrom:0 sub1
+            1 temp one temp
+            7 temp subTo
+            1 constant subTo:0 sub2
+            1 temp one temp
+            7 temp sub_address
+            1 constant sub_address:0 sub_result
+            2 sub1:0 sub2:0 sub_result:0
+            1 temp one control
+            3 Loop
+
+
+JumpEq:1 control one temp
+       7 temp user_address1
+       1 user_address1:0 constant check_from_address
+       1 temp one temp
+       7 temp user_address2
+       1 user_address2:0 constant check_to_address
+       4 check_from_address:0 check_to_address:0 Equal
+       1 temp two control
+       3 Loop
+
+             Equal:1 temp one temp
+                   7 temp jump_to_address1
+                   1 jump_to_address1:0 constant control
+                   3 Loop
+ 
+
+JumpLess:1 control one temp
+         7 temp check1_address
+         1 constant check1_address:0 value1_check
+         1 temp one temp
+         7 temp check2_address
+         1 constant check2_address:0 value2_check
+         5 value1_check:0 value2_check:0 less_than
+         1 temp one control
+         3 Loop
+               less_than:1 temp one temp
+                         7 temp jump_to_address2
+                         1 constant jump_to_address2:0 control
+
+         
+Copy:1 control one temp
+     7 temp copy_address1
+     1 constant copy_address1:0 transfer_from_address
+     1 temp one temp
+     7 temp copy_address2
+     1 constant copy_address2:0 transfer_to_address
+     7 transfer_from_address:0 transfer_to_address:0 9
+
+
+Put:1 control one temp
+    7 temp putting_value
+    1 temp one temp
+    7 temp location_address
+    1 constant location_address:0 put_into_address
+    7 putting_value:0 value_put
+    0 value_put:0 put_into_address:0 9
+
+
+
+Input:1 control one temp
+      7 temp move_to_address
+      1 constant move_to_address:0 new_address
+      6 new_address:0
+      1 temp one control
+      3 Loop
+     
+List:3 3 6 6 9
