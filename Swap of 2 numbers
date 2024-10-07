@@ -1,0 +1,17 @@
+3 5 first_element:23
+2nd_element:24
+
+7 first_element des
+7 des:0 store
+7 2nd_element des1
+7 des1:0 23
+7 store 24
+
+9
+
+temp:0 
+store:0 
+1 2
+ 
+
+
