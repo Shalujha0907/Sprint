@@ -1,27 +1,30 @@
-3 5 first_element:44
-length:5
+3 5 first_element:s1 length:6
+7 first_element temp_first
 
-1 first_element length last_location
-2 last_location one last_location
+1 temp_first length temp_last
+2 temp_last one temp_last
 
-start:7 first_element index1
-7 index1:0 temp_first 
+5 temp_first temp_last 21 9
+7 temp_first first_location
+7 first_location:0 store
 
-7 first_element index3
+7 temp_first x
+7 temp_last y
+7 y:0 x:0
 
-7 last_location index2
-7 index2:0 index3:0
+7 temp_last last_location
+7 store last_location:0
 
-7 temp_first last_location 
+1 temp_first one temp_first
+2 temp_last one temp_last
+3 16
 
-1 one first_element first_element
-2 one last_location last_location
 
-5 first_element last_location start 9
-
-temp_first:0
+store:0
 one:1
-last_location:0
-1 2 3 4 5
+temp_first:0
+temp_last:0
+9
+s1:1 2 3 4 5 6
 
 
