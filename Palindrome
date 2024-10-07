@@ -1,0 +1,25 @@
+3 start first_element_location:47
+length:2 ans:2
+
+start:1 first_element_location length last_element_location 
+2 last_element_location one last_element_location
+
+process:7 first_element_location address_1st_value
+7 last_element_location address_last_value
+
+
+5 first_element_location last_element_location condition
+3 halt
+
+condition:4 address_1st_value:0 address_last_value:0 next 
+7 one 5 9
+
+next:1 first_element_location one first_element_location
+
+2 last_element_location one last_element_location 3 process
+
+
+last_element_location:0
+one:1
+halt:9
+1 2 2 2 3 1
