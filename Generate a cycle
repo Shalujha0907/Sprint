@@ -1,0 +1,37 @@
+3 7 seq_location:59 
+    seq_length:5
+    cycle_location:64
+    cycle_length:5
+ 
+4 seq_length zero halt
+
+7 seq_location start_of_seq
+
+7 cycle_location 
+  cycle_place_of_seq
+
+process:4 cycle_length count1 halt
+4 count2 seq_length change
+
+goback:7 start_of_seq:0 
+  cycle_place_of_seq:0
+
+1 start_of_seq one start_of_seq
+1 cycle_place_of_seq one 
+  cycle_place_of_seq
+
+1 count1 one count1
+1 count2 one count2 3 process
+
+change:7 zero count2 
+7 seq_location start_of_seq 
+3 goback
+
+
+count1:0
+count2:0
+one:1
+halt:9
+zero:0
+1 2 3 4 5
+0 0 0 0 0
