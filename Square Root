@@ -1,0 +1,17 @@
+3 5 inp:4 result:0
+5 inp one 46
+1 count2 result result
+1 count one count
+4 count count2 23 3 9
+4 result inp 43
+5 inp result 47
+1 count2 one count2
+7 zero count 
+7 zero result 3 17
+7 count2 result 9
+2 count2 one result 9 
+count:0
+count2:1
+zero:0
+one:1
+
