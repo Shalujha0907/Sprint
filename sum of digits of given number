@@ -1,0 +1,23 @@
+3 5 number:1234 sum_of_digits:0
+
+7 number value 
+repeat:5 value ten jump 
+
+2 value ten value 
+1 quo one quo 3 repeat 
+
+jump:1 sum_of_digits value sum_of_digits
+7 quo value
+7 zero quo
+
+4 value zero halt 
+3 repeat 
+
+halt:9
+rem:0 
+ten:10
+quo:0
+one:1
+zero:0
+value:0 
+
